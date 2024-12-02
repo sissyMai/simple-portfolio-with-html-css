@@ -1,0 +1,478 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+html {
+	--text-color: rgb(28, 33, 74);
+	--text-color-code: 28, 33, 74;
+	--text-neutral-color: rgb(100, 116, 139);
+	--primary-color: rgb(84, 115, 237);
+	--foreground-color: rgb(238, 245, 255);
+	--gradient-color: linear-gradient(#eef5ff, #c8ddfd);
+}
+
+body {
+	max-width: 1536px;
+	margin: auto;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** ========= 
+	CSS
+===============*/
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	border-top: rgba(0, 0, 0, 0.1)
+}
+
+.container {
+	padding: 60px 170px;
+}
+
+.sectionTitle {
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: bold;
+	color: var(--text-color);
+	text-transform: capitalize;
+}
+
+/* header */
+#headerContainer {
+	display: flex;
+	gap: 40px;
+}
+
+#leftHeaderColumn {
+	display: flex;
+	flex: 1;
+	gap: 40px;
+	align-items: center;
+	color: var(--text-color);
+}
+
+#leftHeaderTitles {
+	display: flex;
+	flex-direction: column;
+	gap: 12px
+}
+
+#badgeWrapper {
+	display: flex;
+	gap: 6px;
+	text-align: center;
+}
+
+#rightHeaderColumn {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: end;
+	/* justify-content: space-between; */
+	gap: 12px;
+	color: var(--text-color)
+}
+
+#avarImgWrapper {
+	border-radius: 100px;
+	width: 100px;
+	height: 100px;
+	overflow: clip;
+}
+
+#avarImg {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.headerTitle {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.badge {
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--text-color);
+	padding: 4px 8px;
+	background-color: var(--foreground-color);
+	border-radius: 4px;
+}
+
+
+/* About Me */
+#AboutMeContainer {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	align-items: center;
+}
+
+#CVButton {
+	border: 1px solid var(--text-color);
+	color: white;
+	padding: 12px 12px;
+	width: 240px;
+	border-radius: 8px;
+	background-color: var(--text-color);
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.5s ease;
+	box-shadow: 0 4px 6px -1px rgba(var(--text-color-code), 0.2), 0 2px 4px -2px rgba(var(--text-color-code), 0.2);
+}
+
+#CVButton:hover,
+#ViewProjectsButton:hover {
+	color: var(--text-color);
+	background-color: var(--foreground-color);
+	border: none;
+}
+
+#ViewProjectsButton {
+	border: 1px solid white;
+	color: white;
+	padding: 12px 12px;
+	width: 240px;
+	border-radius: 8px;
+	background-color: transparent;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.5s ease;
+	box-shadow: 0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.1);
+}
+
+/* #ViewProjectsButton:hover {
+	color: var(--text-color);
+	background-color: var(--foreground-color);
+} */
+
+#CTA {
+	display: flex;
+	gap: 12px
+}
+
+
+/* Projects */
+#ProjectContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+#projectImg {
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+#projectCardsContainer {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: wrap
+}
+
+.projectCard {
+	border-radius: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	overflow: clip;
+	width: 340px;
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.projectCardTitles {
+	display: flex;
+	flex-direction: column;
+	padding: 12px 12px;
+	gap: 4px;
+}
+
+.projectCardImg {
+	width: 340px;
+	height: 340px;
+	object-fit: cover;
+
+}
+
+.cardSubTitle {
+	font-size: 12px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: var(--text-neutral-color);
+}
+
+.cardTitle {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	text-transform: capitalize;
+	color: var(--text-color);
+}
+
+
+/* Skills */
+#SkillsContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+#skillImg {
+	width: 420px;
+	height: 420px;
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
+
+#skillMainContent {
+	display: flex;
+	gap: 40px
+}
+
+.skillSubTitle {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 40px;
+	width: 100%;
+}
+
+.listStyle {
+	list-style-type: disc;
+	margin-top: 10px;
+	margin-left: 40px;
+}
+
+.checkIcon {
+	width: 20px;
+	height: 20px;
+}
+
+/* Footer */
+#footer {
+	font-size: 12px;
+	color: var(--text-neutral-color);
+	text-align: center;
+}
+
+#footerText {
+	margin-top: 60px
+}
+
+/* media queries */
+@media screen and (max-width: 1280px) {
+	#headerContainer {
+		flex-direction: column;
+	}
+
+	#leftHeaderColumn {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#rightHeaderColumn {
+		align-items: center
+	}
+
+	#leftHeaderTitles {
+		align-items: center;
+	}
+
+	.container {
+		padding: 60px 100px;
+	}
+
+	#header-leftCol-p {
+		text-align: center
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#skillMainContent {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	body {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.container {
+		padding: 16px 16px;
+	}
+
+	.headerTitle {
+		font-size: 18px;
+	}
+
+	#badgeWrapper {
+		flex-direction: column;
+	}
+
+	.sectionTitle {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	#CTA {
+		flex-direction: column;
+	}
+
+	#skillImg {
+		width: 100%;
+		height: auto;
+	}
+
+	.skillSubTitle {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	#footerText {
+		margin-top: 16px;
+	}
+}
