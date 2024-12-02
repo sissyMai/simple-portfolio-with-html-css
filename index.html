@@ -6,6 +6,12 @@
     <title>My simple portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="main.js"></script>
   </head>
 
@@ -25,7 +31,7 @@
               <div class="badge">Lập trình web, mobile app</div>
               <div class="badge">Fullstack developer</div>
             </div>
-            <p id="header-leftCol-p">
+            <p>
               Mong muốn ứng tuyển vị trí Junior Developer trong lĩnh vực phát
               triển web và mobile apps.
             </p>
@@ -53,7 +59,7 @@
     <section class="container" style="background-color: var(--primary-color)">
       <div id="AboutMeContainer">
         <h1 class="sectionTitle" style="color: white">Giới Thiệu Bản Thân</h1>
-        <p style="text-align: center; max-width: 620px">
+        <p class="sectionDescription" style="color: rgba(255, 255, 255, 0.8)">
           Xin chào! Mình là sinh viên năm cuối trường đại học CNTT. Mình có niềm
           đam mê với công việc lập trình và vô cùng yêu thích việc tạo ra các
           trang web và mobile app hiện đại và có tính ứng dụng cao.
@@ -75,7 +81,13 @@
     <!-- Skills -->
     <section class="container" style="background-image: var(--gradient-color)">
       <div id="SkillsContainer">
-        <h1 class="sectionTitle">Kỹ năng & Chuyên môn:</h1>
+        <h1 class="sectionTitle">Kỹ năng & Chuyên môn</h1>
+
+        <p class="sectionDescription">
+          Là một nhà phát triển web mới vào nghề, mình có nền tảng vững chắc về
+          các framework front-end như React và thư viện NextJS, và có kinh
+          nghiệm làm việc với các công nghệ back-end như Node.js và Express.
+        </p>
 
         <div id="skillMainContent">
           <img
@@ -112,13 +124,14 @@
               </div>
 
               <ul class="listStyle">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+                <li>HTML, CSS, JS</li>
+                <li>ReactJs</li>
+                <li>NextJs</li>
+                <li>NodeJs, Express</li>
                 <li>C</li>
                 <li>Java</li>
                 <li>SQL</li>
-                <li>Photoshop</li>
+                <li>Figma</li>
               </ul>
             </div>
           </div>
@@ -147,36 +160,58 @@
               gap: 20px;
             "
           >
-            <h1 class="sectionTitle">Đồ Án</h1>
-            <p>Một số đồ án của mình tại trường.</p>
+            <h1 class="sectionTitle">Đồ Án Thực Chiến</h1>
+            <p class="sectionDescription">
+              Bộ sưu tập dự án thực tập tại trường này giúp mình củng cố và hoàn
+              thiện những kỹ năng kỹ thuật cũng như khả năng giải quyết vấn đề
+              một cách sáng tạo.
+            </p>
           </div>
         </div>
 
         <!-- cards -->
         <div id="projectCardsContainer">
-          <div class="projectCard">
-            <img class="projectCardImg" src="./assets/todoList.jpg" />
-            <div class="projectCardTitles">
-              <h3 class="cardSubTitle">dự án 1</h3>
-              <h2 class="cardTitle">Todo List</h2>
+          <a
+            href="https://github.com/sissyMai/simple-portfolio-with-html-css.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projectCard">
+              <img class="projectCardImg" src="./assets/todoList.jpg" />
+              <div class="projectCardTitles">
+                <h3 class="cardSubTitle">dự án 1</h3>
+                <h2 class="cardTitle">Todo List</h2>
+              </div>
             </div>
-          </div>
+          </a>
 
-          <div class="projectCard">
-            <img class="projectCardImg" src="./assets/mobileApp.jpg" />
-            <div class="projectCardTitles">
-              <h3 class="cardSubTitle">dự án 2</h3>
-              <h2 class="cardTitle">Trang thông tin công nghệ</h2>
+          <a
+            href="https://github.com/sissyMai/simple-portfolio-with-html-css.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projectCard">
+              <img class="projectCardImg" src="./assets/mobileApp.jpg" />
+              <div class="projectCardTitles">
+                <h3 class="cardSubTitle">dự án 2</h3>
+                <h2 class="cardTitle">Trang thông tin công nghệ</h2>
+              </div>
             </div>
-          </div>
+          </a>
 
-          <div class="projectCard">
-            <img class="projectCardImg" src="./assets/webDesign.jpg" />
-            <div class="projectCardTitles">
-              <h3 class="cardSubTitle">dự án 3</h3>
-              <h2 class="cardTitle">Spotify Clone</h2>
+          <a
+            href="https://github.com/sissyMai/simple-portfolio-with-html-css.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projectCard">
+              <img class="projectCardImg" src="./assets/webDesign.jpg" />
+              <div class="projectCardTitles">
+                <h3 class="cardSubTitle">dự án 3</h3>
+                <h2 class="cardTitle">Spotify Clone</h2>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
