@@ -1,0 +1,5 @@
+#ani {
+    transform: translateX(-50%);
+    /* animation: float 5s linear infinite; */
+    animation: move-right 5s linear infinite;
+}

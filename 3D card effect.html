@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Card Hover Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f3f4f6;
+        font-family: Arial, sans-serif;
+        perspective: 1000px; /* Enables 3D perspective */
+      }
+
+      .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transform-style: preserve-3d; /* Ensures children maintain 3D */
+        transition: transform 0.5s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: rotateY(-5deg) rotateX(5deg); /* Creates the 3D effect */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        backface-visibility: hidden; /* Prevents backface flicker */
+      }
+
+      .card-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .card-content h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .card-content p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .card-content a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: #007bff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .card-content a:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Card Image" />
+      <div class="card-content">
+        <h3>3D Card</h3>
+        <p>
+          This card has a 3D hover effect. Move your mouse to see the depth!
+        </p>
+        <a href="#">Explore</a>
+      </div>
+    </div>
+  </body>
+</html>
