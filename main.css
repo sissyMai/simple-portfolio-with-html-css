@@ -160,7 +160,7 @@ html {
 }
 
 body {
-	max-width: 1536px;
+
 	margin: 0 auto;
 	font-size: 16px;
 	line-height: 24px;
@@ -184,7 +184,9 @@ hr {
 }
 
 .container {
+	margin: 0 auto;
 	padding: 80px 170px;
+	max-width: 1536px;
 }
 
 .sectionTitle {
@@ -217,7 +219,16 @@ hr {
 	flex: 1;
 	gap: 24px;
 	align-items: center;
-	color: var(--text-color);
+
+	& p {
+		color: var(--n-600);
+	}
+
+	& span {
+		font-size: 16px;
+		font-weight: 600;
+		color: var(--text-color);
+	}
 }
 
 #leftHeaderTitles {
@@ -237,9 +248,16 @@ hr {
 	flex: 1;
 	flex-direction: column;
 	align-items: end;
-	/* justify-content: space-between; */
 	gap: 12px;
-	color: var(--text-color)
+
+	& p {
+		color: var(--n-600);
+
+		& span {
+			font-weight: 600;
+			color: var(--text-color);
+		}
+	}
 }
 
 #avarImgWrapper {
@@ -280,11 +298,13 @@ hr {
 #aboutMe {
 	position: relative;
 	overflow-y: visible;
-	margin: 60px 0;
+	/* margin: 80px 0; */
+	margin: 80px auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	max-width: 1536px;
 
 	& img {
 		position: absolute;
@@ -392,13 +412,13 @@ hr {
 #skillsContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
+	gap: 48px;
 	/* align-items: center; */
 	position: relative;
 
 	& p.sectionDescription {
 		text-align: left;
-		margin-top: 32px;
+		margin-top: 24px;
 	}
 }
 
@@ -653,7 +673,7 @@ div.gridItemHeader>div {
 #ProjectContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
+	gap: 48px;
 	position: relative;
 }
 
@@ -678,7 +698,7 @@ div.gridItemHeader>div {
 	flex-wrap: wrap */
 	display: grid;
 	grid-template-columns: repeat(3, minmax(344px, auto));
-	grid-gap: 40px 40px;
+	grid-gap: 32px 32px;
 	justify-content: center;
 
 	& .projectCard-wrapper {
@@ -745,6 +765,7 @@ div.gridItemHeader>div {
 	color: var(--text-neutral-color);
 	text-align: center;
 	background-image: var(--gradient-color);
+	max-width: none !important;
 }
 
 #footerText {
@@ -786,7 +807,7 @@ div.gridItemHeader>div {
 	/** About Me */
 
 	#aboutMe {
-		margin: 40px 0;
+		margin: 60px 0;
 	}
 
 	.softSkill-badge {
