@@ -1,0 +1,143 @@
+/** ===================================
+	Media Queries - Responsive Layout 
+=======================================*/
+
+/** ===================================
+	Tablet & Small Laptop
+=======================================*/
+
+@media screen and (max-width: 1280px) {
+    .container {
+        padding: 40px 100px;
+    }
+
+    #headerContainer {
+        flex-direction: column;
+    }
+
+    #leftHeaderColumn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #leftHeaderTitles {
+        align-items: center;
+    }
+
+    #leftHeaderTitles p {
+        text-align: center;
+        max-width: 320px;
+    }
+
+    #rightHeaderColumn {
+        align-items: center
+    }
+
+    /**** ABOUT ME ******/
+
+    #aboutMeSection {
+        margin: 40px auto;
+    }
+
+    .softSkill-badge {
+        position: relative !important;
+        transform: none !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        right: auto !important;
+    }
+
+    .closedBookIcons {
+        visibility: hidden;
+    }
+
+    /*** PROJECTS ***/
+    #projectCardsContainer {
+        grid-template-columns: repeat(2, minmax(340px, auto));
+    }
+}
+
+/** ===================================
+	Small Tablet
+=======================================*/
+
+@media screen and (max-width: 768px) {
+
+    /**** SKILLS ******/
+    #skillMainContent {
+        /* flex-direction: column; */
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        /* Single column */
+        grid-template-rows: minmax(280px, auto);
+        /* Adjust row height automatically */
+
+        & div.gridItem {
+            grid-column: span 1 !important;
+            grid-row: span 1 !important;
+        }
+    }
+
+    .gridItem:nth-child(4) {
+        min-height: 280px;
+    }
+
+
+    /**** ABOUT ME ******/
+    #aboutMeBorder {
+        padding: 8px;
+        width: 80%;
+    }
+
+    #aboutMeContainer {
+        background: white;
+    }
+
+    #CTA {
+        flex-direction: column;
+    }
+
+    #aboutMeSection img {
+        visibility: hidden;
+    }
+
+    /*** PROJECTS ***/
+    #projectCardsContainer {
+        grid-template-columns: repeat(1, minmax(320px, auto));
+    }
+}
+
+/** ===================================
+	Phone
+=======================================*/
+
+@media screen and (max-width: 570px) {
+    body {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .container {
+        padding: 32px 16px;
+    }
+
+    #badgeWrapper {
+        flex-direction: column;
+    }
+
+    .sectionTitle {
+        /* font-size: 28px; */
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    #skillImg {
+        width: 100%;
+        height: auto;
+    }
+
+    #footerText {
+        margin-top: 16px;
+    }
+}

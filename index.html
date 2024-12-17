@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>My simple portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="animation.css"
+      href="css/responsive.css"
     />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,37 +25,40 @@
     <!-----------
       Header 
     --------------->
-    <header class="container" style="padding-top: 40px">
-      <div id="headerContainer">
-        <!-- left column -->
-        <div id="leftHeaderColumn">
-          <div id="avarImgWrapper"></div>
+    <header>
+      <div class="container">
+        <div id="headerContainer">
+          <!-- left column -->
+          <div id="leftHeaderColumn">
+            <!-- use img as background so that we can do shadow -->
+            <div id="avarImgWrapper"></div>
 
-          <div id="leftHeaderTitles">
-            <h1 class="headerTitle">Mai Lê</h1>
-            <div id="badgeWrapper">
-              <div class="badge">Lập trình web, mobile app</div>
-              <div class="badge">Fullstack developer</div>
+            <div id="leftHeaderTitles">
+              <h2 class="headerTitle">Mai Lê</h2>
+              <div id="badgeWrapper">
+                <div class="badge">Lập trình web, mobile app</div>
+                <div class="badge">Fullstack developer</div>
+              </div>
+              <p>
+                Mong muốn ứng tuyển vị trí
+                <span>Junior Developer</span> trong lĩnh vực phát triển web và
+                mobile apps.
+              </p>
             </div>
+          </div>
+
+          <!-- right column -->
+          <div id="rightHeaderColumn">
+            <h2 class="headerTitle">Thông Tin Liên Hệ</h2>
             <p>
-              Mong muốn ứng tuyển vị trí
-              <span>Junior Developer</span> trong lĩnh vực phát triển web và
-              mobile apps.
+              Gửi email cho mình tại:
+              <span>youremail@gmail.com</span>
+            </p>
+            <p>
+              Gọi cho mình tại:
+              <span>0897123434</span>
             </p>
           </div>
-        </div>
-
-        <!-- right column -->
-        <div id="rightHeaderColumn">
-          <h1 class="headerTitle">Thông Tin Liên Hệ</h1>
-          <p>
-            Gửi email cho mình tại:
-            <span>youremail@gmail.com</span>
-          </p>
-          <p>
-            Gọi cho mình tại:
-            <span>0897123434</span>
-          </p>
         </div>
       </div>
     </header>
@@ -63,10 +66,10 @@
     <!--------------
       About Me
     ------------------>
-    <section id="aboutMe">
+    <section id="aboutMeSection">
       <img src="./assets/rocket-icon.svg" alt="rocket icon" />
       <img src="./assets/laptop-icon.svg" alt="laptop icon" />
-      <div id="aboutMeWrapper">
+      <div id="aboutMeBorder">
         <div id="aboutMeContainer">
           <h1 class="sectionTitle">Giới Thiệu Bản Thân</h1>
           <p class="sectionDescription">
@@ -372,30 +375,13 @@
       <div class="container">
         <div id="ProjectContainer">
           <!-- header -->
-          <div
-            style="
-              display: flex;
-              gap: 40px;
-              align-items: center;
-              justify-content: center;
-            "
-          >
-            <!-- <img src="./assets/project.jpg" alt="projectImg" id="projectImg" /> -->
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 24px;
-              "
-            >
-              <h1 class="sectionTitle">Đồ Án Thực Chiến</h1>
-              <p class="sectionDescription">
-                Bộ sưu tập dự án thực tập tại trường này giúp mình củng cố và
-                hoàn thiện những kỹ năng kỹ thuật cũng như khả năng giải quyết
-                vấn đề một cách sáng tạo.
-              </p>
-            </div>
+          <div>
+            <h1 class="sectionTitle">Đồ Án Thực Chiến</h1>
+            <p class="sectionDescription">
+              Bộ sưu tập dự án thực tập tại trường này giúp mình củng cố và hoàn
+              thiện những kỹ năng kỹ thuật cũng như khả năng giải quyết vấn đề
+              một cách sáng tạo.
+            </p>
           </div>
 
           <!-- cards -->
@@ -407,11 +393,11 @@
             >
               <div class="projectCard">
                 <div class="projectCard-wrapper">
-                  <img class="projectCardImg" src="./assets/todoList.jpg" />
+                  <img class="projectCardImg" src="./assets/project1.jpg" />
                 </div>
                 <div class="projectCardTitles">
-                  <h3 class="cardSubTitle">dự án 1</h3>
-                  <h2 class="cardTitle">Todo List</h2>
+                  <h4 class="cardSubTitle">dự án 1</h4>
+                  <h3 class="cardTitle">Todo List</h3>
                 </div>
               </div>
             </a>
@@ -423,11 +409,11 @@
             >
               <div class="projectCard">
                 <div class="projectCard-wrapper">
-                  <img class="projectCardImg" src="./assets/mobileApp.jpg" />
+                  <img class="projectCardImg" src="./assets/project2.jpg" />
                 </div>
                 <div class="projectCardTitles">
-                  <h3 class="cardSubTitle">dự án 2</h3>
-                  <h2 class="cardTitle">Trang thông tin công nghệ</h2>
+                  <h4 class="cardSubTitle">dự án 2</h4>
+                  <h3 class="cardTitle">Trang thông tin công nghệ</h3>
                 </div>
               </div>
             </a>
@@ -439,11 +425,11 @@
             >
               <div class="projectCard">
                 <div class="projectCard-wrapper">
-                  <img class="projectCardImg" src="./assets/webDesign.jpg" />
+                  <img class="projectCardImg" src="./assets/project3.jpg" />
                 </div>
                 <div class="projectCardTitles">
-                  <h3 class="cardSubTitle">dự án 3</h3>
-                  <h2 class="cardTitle">Spotify Clone</h2>
+                  <h4 class="cardSubTitle">dự án 3</h4>
+                  <h3 class="cardTitle">Spotify Clone</h3>
                 </div>
               </div>
             </a>
@@ -458,8 +444,8 @@
                   <img class="projectCardImg" src="./assets/project4.jpg" />
                 </div>
                 <div class="projectCardTitles">
-                  <h3 class="cardSubTitle">dự án 4</h3>
-                  <h2 class="cardTitle">Facebook Clone</h2>
+                  <h4 class="cardSubTitle">dự án 4</h4>
+                  <h3 class="cardTitle">Facebook Clone</h3>
                 </div>
               </div>
             </a>
@@ -474,8 +460,8 @@
                   <img class="projectCardImg" src="./assets/project5.jpg" />
                 </div>
                 <div class="projectCardTitles">
-                  <h3 class="cardSubTitle">dự án 5</h3>
-                  <h2 class="cardTitle">Thiết Kế Trang Doanh Nghiệp</h2>
+                  <h4 class="cardSubTitle">dự án 5</h4>
+                  <h3 class="cardTitle">Thiết Kế Trang Doanh Nghiệp</h3>
                 </div>
               </div>
             </a>
@@ -490,8 +476,8 @@
                   <img class="projectCardImg" src="./assets/project6.jpg" />
                 </div>
                 <div class="projectCardTitles">
-                  <h3 class="cardSubTitle">dự án 6</h3>
-                  <h2 class="cardTitle">Thiết Kế Web</h2>
+                  <h4 class="cardSubTitle">dự án 6</h4>
+                  <h3 class="cardTitle">Thiết Kế Web</h3>
                 </div>
               </div>
             </a>
@@ -505,8 +491,7 @@
     ---------------->
     <footer id="footer">
       <div class="container">
-        <!-- <hr /> -->
-        <div id="footerText">© 2024 Mai Le's Portfolio</div>
+        <p>© 2024 Mai Le's Portfolio</p>
       </div>
     </footer>
   </body>
